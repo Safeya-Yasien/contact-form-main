@@ -17,13 +17,10 @@
 
 body {
   margin: 0;
-  padding: 2rem;
   background: var(--green-200);
-  height: 100vh;
+  padding: 2rem;
+  height: 100dvh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .container {
@@ -34,6 +31,9 @@ body {
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 h1 {
