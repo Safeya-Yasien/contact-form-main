@@ -19,7 +19,8 @@ body {
   margin: 0;
   background: var(--green-200);
   padding: 2rem;
-  min-height: 100vh;  display: flex;
+  min-height: 100vh;
+  display: flex;
 }
 
 .container {
