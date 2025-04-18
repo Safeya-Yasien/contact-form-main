@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Frontend Mentor | Contact form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <form id="contactForm" novalidate>
+        <h1>Contact Us</h1>
+        <div id="successMessage" class="success hidden">
+          Message Sent! Thanks for completing the form. We'll be in touch soon!
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName"
+              >First Name <span style="color: var(--red)">*</span></label
+            >
+            <input type="text" id="firstName" />
+            <span class="error" id="firstNameError"
+              >This field is required</span
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="lastName"
+              >Last Name <span style="color: var(--red)">*</span></label
+            >
+            <input type="text" id="lastName" />
+            <span class="error" id="lastNameError">This field is required</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email"
+            >Email Address <span style="color: var(--red)">*</span></label
+          >
+          <input type="email" id="email" />
+          <span class="error" id="emailError"
+            >Please enter a valid email address</span
+          >
+        </div>
+
+        <div class="form-group">
+          <p>Query Type <span style="color: var(--red)">*</span></p>
+          <div class="radio-group">
+            <label class="radio-box">
+              <input type="radio" name="queryType" value="general" /> General
+              Enquiry
+            </label>
+            <label class="radio-box">
+              <input type="radio" name="queryType" value="support" /> Support
+              Request
+            </label>
+          </div>
+          <span class="error" id="queryTypeError"
+            >Please select a query type</span
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="message"
+            >Message <span style="color: var(--red)">*</span></label
+          >
+          <textarea id="message" rows="5"></textarea>
+          <span class="error" id="messageError">This field is required</span>
+        </div>
+
+        <div class="form-group">
+          <label
+            ><input type="checkbox" id="consent" /> I consent to being contacted
+            by the team</label
+          >
+          <span class="error" id="consentError"
+            >To submit this form, please consent to being contacted</span
+          >
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Safeya Yasien</a>.
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

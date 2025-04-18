@@ -1,0 +1,166 @@
+:root {
+  --green-200: hsl(148, 38%, 91%);
+  --green-600: hsl(169, 82%, 27%);
+  --red: hsl(0, 66%, 54%);
+  --grey-500: hsl(186, 15%, 59%);
+  --grey-900: hsl(187, 24%, 22%);
+  --white: hsl(0, 0%, 100%);
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  background: var(--green-200);
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-bottom: 1rem;
+  color: var(--grey-900);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label,
+p {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--grey-900);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--grey-500);
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+textarea {
+  resize: none;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-row .form-group {
+  flex: 1;
+  min-width: 150px;
+}
+
+button {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--green-600);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: hsl(169, 82%, 20%);
+}
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.radio-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--grey-500);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+  width: 100%;
+}
+
+/* Make radio circle green */
+input[type="radio"] {
+  accent-color: var(--green-600);
+}
+
+/* Highlight selected radio */
+.radio-box input[type="radio"]:checked + span,
+.radio-box input[type="radio"]:checked {
+  border-color: var(--green-600);
+}
+
+/* Optional hover effect */
+.radio-box:hover {
+  border-color: var(--green-600);
+}
+
+.error {
+  color: var(--red);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+.success {
+  background: var(--green-200);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: var(--green-600);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.5rem;
+  }
+}
